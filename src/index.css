@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    overflow-x: hidden;
+}
+
+.site-wrapper{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+

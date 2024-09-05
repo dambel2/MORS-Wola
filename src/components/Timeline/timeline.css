@@ -1,0 +1,93 @@
+
+:root {
+    --main-color:       #e18a33;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.timeline::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    left: calc(50% - 1px);
+    background-color: var(--main-color);
+}
+
+.container {
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.container:last-child{
+    margin-bottom: 0;
+}
+
+.container:nth-child(odd){
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+
+.container:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+
+.container-dot{
+    height: 21px;
+    width: 21px;
+    background-color: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color)
+                0 0 50px var(--main-color);
+    position: absolute;
+    left: calc(50% - 8px);
+    top: 10px;
+}
+
+
+
+/* Class that is added when the element is in view */
+.container.visible {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.container
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: (--main-color);
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--main-color);
+    width: 50px;
+}
+
+/* Responsive Timeline */
+
+@media(max-width: 991px){
+    .timeline::before{
+        left: 7px;
+    }
+    .container:nth-child(odd){
+        padding-right: 0;
+        text-align: left;
+    }
+    .container:nth-child(even),
+    .container:nth-child(odd){
+        padding-left: 37px;
+    }
+    .container-dot{
+        left: 0;
+    }
+}
