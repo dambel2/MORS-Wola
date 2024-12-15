@@ -5,7 +5,7 @@ const FAQ = () => {
     <div className="p-4 rounded-lg flex flex-col gap-4">
       <Accordion
         title="Jakie są godziny otwarcia chłodni?"
-        answer="Chłodnia MORS Wola jest otwarta od poniedziałku do piątku w godzinach 6:00 - 22:00 oraz w weekendy od 7:00 do 20:00."
+        answer="Chłodnia MORS Wola jest otwarta non-stop (24/7)"
       />
       <Accordion
         title="Czy oferujecie przechowywanie towarów dla klientów indywidualnych?"
@@ -13,13 +13,13 @@ const FAQ = () => {
       />
       <Accordion 
         title="Jakie produkty mogą być przechowywane w chłodni MORS Wola?" 
-        answer="W chłodni MORS Wola można przechowywać różnorodne produkty wymagające niskich temperatur, w tym mięso, ryby, owoce, warzywa, nabiał, a także farmaceutyki i inne wrażliwe na temperaturę produkty." />
+        answer="W chłodni MORS Wola można przechowywać różnorodne produkty wymagające obniżonych temperatur." />
         <Accordion 
-        title="Czy chłodnia MORS Wola oferuje usługi dodatkowe, takie jak pakowanie lub transport?" 
-        answer="Tak, oprócz przechowywania towarów, chłodnia MORS Wola oferuje usługi dodatkowe, takie jak pakowanie, etykietowanie oraz organizację transportu produktów do i z chłodni." />
+        title="Czy chłodnia MORS Wola oferuje usługi dodatkowe?" 
+        answer="Tak, oprócz przechowywania towarów, chłodnia MORS Wola oferuje również załadunek i rozładunek dostaw." />
         <Accordion 
         title="Jak mogę zarezerwować miejsce w chłodni MORS Wola?" 
-        answer="Aby zarezerwować miejsce w chłodni MORS Wola, należy skontaktować się z biurem obsługi klienta pod numerem telefonu [wstaw numer telefonu] lub wysłać e-mail na adres [wstaw adres e-mail]. Nasi pracownicy pomogą w ustaleniu szczegółów i dostosowaniu oferty do Twoich potrzeb." />
+        answer="Aby zarezerwować miejsce w chłodni MORS Wola, należy skontaktować się z biurem obsługi klienta przez formularz poniżej. Nasi pracownicy pomogą w ustaleniu szczegółów i dostosowaniu oferty do Twoich potrzeb." />
     </div>
   );
 };

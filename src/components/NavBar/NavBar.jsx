@@ -24,24 +24,20 @@ const NavBar = () => {
   return (
     <div className="">
 
-      <div className="pt-2.5 flex bg-[#37b1e0] lg:px-24 md:px-4 px-2 pb-2.5 justify-between text-white">
-        <div className="flex justify-center items-center md:gap-8 sm:gap-4 gap-2 md:text-lg sm:text-sm text-xs">
-          <a className="cursor-pointer hover:bg-white hover:text-[#37b1e0] p-1 transition-all duration-500 ease-in-out"><FaFacebookF /></a>
-          <a className="cursor-pointer hover:bg-white hover:text-[#37b1e0] p-1 transition-all duration-500 ease-in-out"><FaXTwitter /></a>
-          <a className="cursor-pointer hover:bg-white hover:text-[#37b1e0] p-1 transition-all duration-500 ease-in-out"><FaLinkedinIn /></a>
-        </div>
-        <div className="flex md:gap-8 sm:gap-4 gap-2 md:text-lg sm:text-sm text-xs">
+      <div className="pt-2.5 flex bg-[#37b1e0] lg:px-24 md:px-4  pb-2.5 justify-center text-white">
+
+        <div className="flex md:gap-8 sm:gap-4 gap-2 md:text-lg sm:text-sm text-xs justify-center">
           <div className="flex md:gap-2 gap-1 items-center">
             <FaLocationDot />
             <p>Warszawa, Wola</p>
           </div>
           <div className="flex md:gap-2 gap-1 items-center">
             <FaPhoneVolume />
-            <p>+48 123 456 789</p>
+            <p>22 836 74 04</p>
           </div>
           <div className="flex md:gap-2 gap-1 items-center">
             <MdEmail />
-            <p>mors@wola.pl</p>
+            <p>administracja@morswola.pl</p>
           </div>
         </div>
       </div>
@@ -49,30 +45,24 @@ const NavBar = () => {
       <div className="2xl:px-64 md:px-32 sm:px-8 px-4 pt-12 flex justify-between items-center gap-24">
         
         <div className="flex gap-20">
-        <Link to="/"><img src="/src/assets/logo-morswola.jpg" className="w-[100px] sm:h-[50px] sm:w-[200px] h-[25px]"/></Link>
+        <Link to="/"><img src="/logo-morswola.jpg" className="w-[100px] sm:h-[50px] sm:w-[200px] h-[25px]"/></Link>
         <div className="xl:flex items-center font-semibold text-md gap-4 2xl:gap-8 hidden">
           <NavItem linkToPage={"/"}>Strona Główna</NavItem>
-          <DropdownLink href="/onas" FlyoutContent={OnasContent}>O Nas</DropdownLink>
-          <NavItem linkToPage={"/oferta"}>Oferta</NavItem>
-          <NavItem linkToPage={"/bezpieczenstwo"}>Bezpieczeństwo</NavItem>
-          <DropdownLink href="/kariera" FlyoutContent={KarieraContent}><p className="">Kariera</p></DropdownLink>
+          <NavItem linkToPage={"/kariera"} ><p className="">Kariera</p></NavItem>
         </div>
         </div>
         <div className='xl:hidden flex'>
           <button onClick={toggle}>{open ? <FiX className="w-8 h-8" />: <FiAlignJustify className="w-8 h-8" />}</button>
         </div>
-        <button className="hidden px-8 py-2 bg-[#e18a33] font-semibold text-white xl:flex items-center gap-2 hover:shadow-lg hover:shadow-gray-500/50 transition-shadow duration-300">
+        <a href="#contact"className="hidden px-8 py-2 bg-[#e18a33] font-semibold text-white xl:flex items-center gap-2 hover:shadow-lg hover:shadow-gray-500/50 transition-shadow duration-300">
           Kontakt
           <FaRegArrowAltCircleRight />
-        </button>
+        </a>
       </div>
       {open && (
         <div className='flex basis-full flex-col items-center xl:hidden gap-4 pt-8'>
           <NavItem linkToPage={"/"}>Strona Główna</NavItem>
-          <DropdownLink href="/onas" FlyoutContent={OnasContent}>O Nas</DropdownLink>
-          <NavItem linkToPage={"/oferta"}>Oferta</NavItem>
-          <NavItem linkToPage={"/bezpieczenstwo"}>Bezpieczeństwo</NavItem>
-          <DropdownLink href="/kariera" FlyoutContent={KarieraContent}><p className="">Kariera</p></DropdownLink>
+          <NavItem linkToPage={"/kariera"} ><p className="">Kariera</p></NavItem>
         </div>
     )}
     </div>

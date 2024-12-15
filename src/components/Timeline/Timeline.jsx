@@ -35,7 +35,7 @@ const Timeline = () => {
                     >
                         <div className='container-dot'></div>
                         <h4 className='text-[#e18a33] text-2xl font-semibold mb-8'>{element.time}</h4>
-                        <div className='border-4 border-[#e18a33] px-[50px] py-[30px] rounded-3xl hover:bg-gray-100'>
+                        <div className='border-4 border-[#e18a33] px-[20px] sm:px-[50px] py-[30px] rounded-3xl hover:bg-gray-100'>
                             <h5 className='text-xl font-semibold mb-2'>{element.title}</h5>
                             <p>{element.description}</p>
                         </div>
